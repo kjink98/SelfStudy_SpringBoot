@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dogether</title>
+    <script>
+        function goLogin() {
+            location.href = "/login";
+        }
+    </script>
+</head>
+<body>
+    <h1>회원가입 정보를 확인하세요.</h1>
+    <h3 th:text="${user.userNickname} + '님 가입을 축하드립니다.'"></h3>
+    <table>
+        <tr>
+            <td>아이디</td>
+            <td th:text="${user.userId}"></td>
+        </tr>
+        <!-- 나머지 필드들도 동일하게 작성 -->
+    </table>
+    <br>
+    <input type="button" value="확인" onclick="goLogin()">
+</body>
+</html>
